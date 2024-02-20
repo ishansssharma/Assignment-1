@@ -1,0 +1,7 @@
+:root {
+	--color-primary: lightgreen;
+	--color-secondary: rgb(107, 177, 107);
+
+	--font-size--small: 1rem;
+	--font-size--medium: 2rem;
+}
