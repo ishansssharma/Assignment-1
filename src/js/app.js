@@ -138,3 +138,28 @@ function renderPlanets(planets) {
 
 	});
 }
+
+function renderVehicles(vehicles) {
+	vehicles.forEach(vehicle => {
+		//CREATING ELEMENTS
+		const vehicleList = document.querySelector(".vehicleslist");
+
+		const liVehicles = document.createElement("li");
+		const infoName3 = document.createElement("span");
+		const infoModel = document.createElement("span");
+		const infoManufacturer = document.createElement("span");
+		const infoCostInCredits = document.createElement("span");
+		const infoLength = document.createElement("span");
+
+		vehicleList.appendChild(liVehicles);
+		liVehicles.append(infoName3, infoModel, infoManufacturer, infoCostInCredits, infoLength);
+
+		infoName3.textContent = vehicle.name
+		infoModel.textContent = vehicle.model
+		infoManufacturer.textContent = vehicle.manufacturer
+		infoCostInCredits.textContent = vehicle.cost_in_credits
+		infoLength.textContent = vehicle.length
+
+
+	});
+}
