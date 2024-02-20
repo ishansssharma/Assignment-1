@@ -52,3 +52,39 @@ const fetchInfo = async () => {
 }
 
 fetchInfo()
+
+//Creating function for rendering the data on screen
+function renderFilms(films) {
+
+	films.forEach(film => {
+
+		//CREATING ELEMENTS
+
+		const ulFilms = document.querySelector(".filmslist")
+
+		const li = document.createElement("li");
+		const infoTitle = document.createElement("span");
+		const infoCreated = document.createElement("span");
+		const infoDirector = document.createElement("span");
+		const infoEpisodeId = document.createElement("span");
+		const infoReleaseDate = document.createElement("span");
+
+		//APPENDING ELEMENTS
+		ulFilms.appendChild(li);
+		li.append(infoTitle, infoCreated, infoDirector, infoEpisodeId, infoReleaseDate)
+
+		//ADDING CONTENT TO THE ELEMENTS 
+		infoTitle.textContent = film.title
+		infoCreated.textContent = film.created
+		infoDirector.textContent = film.director
+		infoEpisodeId.textContent = film.episode_id
+		infoReleaseDate.textContent = film.release_date
+
+
+
+
+
+
+
+	});
+}
