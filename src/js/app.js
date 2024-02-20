@@ -114,3 +114,27 @@ function renderPeople(people) {
 	});
 }
 
+function renderPlanets(planets) {
+	planets.forEach(planet => {
+		//CREATING ELEMENTS
+		const planetList = document.querySelector(".planetlist");
+
+		const liPlanets = document.createElement("li");
+		const infoName2 = document.createElement("span");
+		const infoRotationPeriod = document.createElement("span");
+		const infoOrbitalPeriod = document.createElement("span");
+		const infoDiameter = document.createElement("span");
+		const infoClimate = document.createElement("span");
+
+		planetList.appendChild(liPlanets);
+		liPlanets.append(infoName2, infoRotationPeriod, infoOrbitalPeriod, infoDiameter, infoClimate);
+
+		infoName2.textContent = planet.name
+		infoRotationPeriod.textContent = planet.rotation_period
+		infoOrbitalPeriod.textContent = planet.orbital_period
+		infoDiameter.textContent = planet.diameter
+		infoClimate.textContent = planet.climate
+
+
+	});
+}
