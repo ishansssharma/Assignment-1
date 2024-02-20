@@ -88,3 +88,29 @@ function renderFilms(films) {
 
 	});
 }
+
+function renderPeople(people) {
+	people.forEach(people => {
+		//CREATING ELEMENTS
+		const peopleList = document.querySelector(".peoplelist");
+
+		const liPeople = document.createElement("li");
+		const infoName = document.createElement("span");
+		const infoHeight = document.createElement("span");
+		const infoMass = document.createElement("span");
+		const infoHairColor = document.createElement("span");
+		const infoSkinColor = document.createElement("span");
+
+		peopleList.appendChild(liPeople);
+		liPeople.append(infoName, infoHeight, infoMass, infoHairColor, infoSkinColor);
+
+		infoName.textContent = people.name
+		infoHeight.textContent = people.height
+		infoMass.textContent = people.mass
+		infoHairColor.textContent = people.hair_color
+		infoSkinColor.textContent = people.skin_color
+
+
+	});
+}
+
